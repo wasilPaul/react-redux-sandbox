@@ -4,8 +4,8 @@ const INC = 'counter/INC'
 const DEC = 'counter/DEC'
 
 //action creator declaration
-const inc = () => ({ type: INC })
-const dec = () => ({ type: DEC })
+export const inc = () => ({ type: INC })
+export const dec = () => ({ type: DEC })
 
 //initial state - state that is present before any action will be descriped
 const initialState = 0
