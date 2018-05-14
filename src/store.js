@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from 'redux'
-import counterReducer, { inc, dec } from './state/counter'
+import counter, { inc, dec } from './state/counter'
 
 
 const reducer = combineReducers({
-  counter: counterReducer
+  counter // this is the same {counter: counter} ECMA6
 })
 
 export const store = createStore(
@@ -11,5 +11,5 @@ export const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-window.inc = () => store.dispatch(inc())
-window.dec = () => store.dispatch(dec())
+window.inc = (number) => store.dispatch(inc(number))
+window.dec = (number) => store.dispatch(dec(number))
