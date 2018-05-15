@@ -17,11 +17,12 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case ADD:
-            return action.taskText ?
+            return state.newTaskText?
                 {
                     ...state,
+                    newTaskText: '',
                     tasks: state.tasks.concat({
-                        text: action.taskText,
+                        text: state.newTaskText,
                         compleated: false
                     })
                 }
