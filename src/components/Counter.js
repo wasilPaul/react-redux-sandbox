@@ -13,9 +13,7 @@ const Counter = (props) =>
         <RaisedButton label={'/ 2'} primary={true} onClick={props.onDiviHandler} />
     </div>
 
-const mapStateToProps = state => ({
-    counterValue: state.counter
-})
+const mapStateToProps = state => ({ counterValue: state.counter }) //zawsze podwojne nawiasy bo funkcja ma przekazac obiekt
 
 const mapDispatchToProps = dispatch => ({
     onDecHandler: () => dispatch(dec()), // do tego prpsa przypisz funkcje ktra wywola funkcje

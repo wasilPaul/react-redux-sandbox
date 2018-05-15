@@ -22,3 +22,6 @@ window.del = (index) => store.dispatch(del(index))
 
 window.multi = (number) => store.dispatch(multi(number))
 window.divi = (number) => store.dispatch(divi(number))
+
+store.dispatch(add('Task1'))
+store.dispatch(add('Task1'))
