@@ -3,6 +3,7 @@ import Counter from './components/Counter';
 import ToDo from './components/ToDo';
 import Text from './components/Text'
 import UserList from './components/UserList';
+import AsyncReduxCounter from './components/AsyncReduxCounter'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Counter />
         <ToDo />
         <Text/>
+        <AsyncReduxCounter />
       </div>
     );
   }
