@@ -12,7 +12,6 @@ class App extends Component {
         <Counter />
         <ToDo />
         <Text/>
-
       </div>
     );
   }

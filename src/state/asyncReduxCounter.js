@@ -1,0 +1,5 @@
+const INC = 'asyncReduxCounter/INC'
+
+
+
+

@@ -5,6 +5,7 @@ import App from './App'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { Provider } from 'react-redux'
 
+import * as firebase from './firebase'
 
 ReactDOM.render(
     <Provider store={store}>
@@ -13,3 +14,6 @@ ReactDOM.render(
         </MuiThemeProvider>
     </Provider>
     , document.getElementById('root'))
+
+
+    
