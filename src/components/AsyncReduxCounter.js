@@ -1,23 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { RaisedButton } from 'material-ui';
-import { inc } from '../state/asyncReduxCounter'
+import { inc, dec } from '../state/asyncReduxCounter'
 import { store } from '../store';
 
 const AsyncReduxCounter = (props) =>
-  <div>
-    <h1>{props.asyncReduxCounter}</h1>
-    <RaisedButton
-      onClick={props.onIncClick}
-    />
-  </div>
+  (props.asyncCounterValue === null ? 'Loading' :
+    <div>
+      <h1>{props.asyncCounterValue}</h1>
+      <RaisedButton
+        label={'Dec'}
+        onClick={props.onDecClick}
+      />
+      <RaisedButton
+        label={'Add'}
+        onClick={props.onIncClick}
+      />
+    </div>)
 
 const mapStateToProps = state => ({
-  asyncReduxCounter: state.asyncReduxCounter.asyncCounterValue
+  asyncCounterValue: state.asyncReduxCounter.asyncCounterValue
 })
 
 const mapDispatchToProps = dispatch => ({
-  onIncClick: () => dispatch(inc())
+  onIncClick: () => dispatch(inc()),
+  onDecClick: () => dispatch(dec())
 
 })
 

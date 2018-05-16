@@ -2,7 +2,7 @@ import {database} from '../firebase'
 
 const SET = 'asyncReduxCounter/SET'
 
-export const set = (newValue) => ({
+const set = (newValue) => ({
   type: SET,
   newValue
 })
@@ -10,6 +10,11 @@ export const set = (newValue) => ({
 export const inc = () => (dispatch, getState)=>{
   const state = getState()
   database.ref('/counter').set(state.asyncReduxCounter.asyncCounterValue + 1)
+}
+
+export const dec = () => (dispatch, getState)=>{
+  const state = getState()
+  database.ref('/counter').set(state.asyncReduxCounter.asyncCounterValue - 1)
 }
 
 export const initCounterSync = () => (dispatch, getState) => {
@@ -20,7 +25,7 @@ export const initCounterSync = () => (dispatch, getState) => {
 }
 
 const initialState = {
-  acyncCounterValue: 0
+  asyncCounterValue: null
 }
 
 export default (state = initialState, action) => {
