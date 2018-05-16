@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { RaisedButton, TextField } from 'material-ui'
+import { TextField } from 'material-ui'
 import { newTextChanged } from '../state/text'
 
 
