@@ -10,7 +10,7 @@ const Auth = (props) => (
         props.children
         :
         <LogInByGoogle
-          onLogInHandler={}
+          onLogInHandler={props.logInByGoogle}
         />
     }
   </div>
